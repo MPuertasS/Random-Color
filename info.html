@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Información | Random Color Lab</title>
+  <style>
+    :root {
+      --ink: #f5f7ff;
+      --muted: #a1aabd;
+      --panel: rgba(11, 16, 31, 0.84);
+      --line: rgba(255, 255, 255, 0.12);
+      --accent: #b9c7d8;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      min-height: 100vh;
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 18% 22%, rgba(68, 119, 255, 0.16) 0 1px, transparent 2px),
+        radial-gradient(circle at 80% 13%, rgba(255, 255, 255, 0.82) 0 1px, transparent 2px),
+        radial-gradient(circle at 67% 74%, rgba(157, 252, 255, 0.7) 0 1px, transparent 2px),
+        radial-gradient(circle at 33% 86%, rgba(255, 255, 255, 0.64) 0 1px, transparent 2px),
+        radial-gradient(ellipse at 50% -10%, #25365d 0, #10172a 48%, #060914 100%);
+      background-size: 181px 173px, 257px 223px, 211px 197px, 307px 263px, 100% 100%;
+      font-family: Georgia, 'Times New Roman', serif;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      opacity: .12;
+      background-image: linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
+      background-size: 52px 52px;
+      mask-image: linear-gradient(to bottom, black, transparent 78%);
+    }
+
+    main { position: relative; width: min(760px, calc(100% - 32px)); min-height: 100vh; margin: auto; padding: 54px 0 44px; }
+    header { margin-bottom: 28px; }
+    .eyebrow { color: var(--accent); font: 700 11px/1.2 Consolas, monospace; letter-spacing: .28em; text-transform: uppercase; }
+    h1 { margin: 14px 0 0; font-size: clamp(42px, 8vw, 72px); line-height: .95; font-weight: 400; letter-spacing: -.05em; }
+    .panel { padding: clamp(24px, 5vw, 48px); background: var(--panel); border: 1px solid var(--line); border-radius: 18px; box-shadow: 0 20px 55px rgba(0,0,0,.28), inset 0 1px rgba(255,255,255,.06); backdrop-filter: blur(10px); }
+    .panel p { margin: 0; color: #d8deeb; font-size: clamp(20px, 3vw, 28px); line-height: 1.55; }
+    .back-link { display: inline-block; margin-top: 26px; color: var(--ink); border-bottom: 1px solid var(--accent); font: 12px Consolas, monospace; letter-spacing: .08em; text-decoration: none; text-transform: uppercase; }
+    .back-link:hover { color: var(--accent); }
+    @media (max-width: 600px) { main { padding-top: 34px; } }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <div class="eyebrow">Random Color Lab / Info</div>
+      <h1>Sobre el proyecto</h1>
+    </header>
+
+    <section class="panel">
+      <p>Este es un <strong>proyecto personal muy pequeño hecho con IA</strong>. No pretendo nada con esto; simplemente quería ver cómo funciona la IA y qué es capaz de hacer creando un solo documento HTML. Vi que a mucha gente no le gusta el HTML y quise probar qué podía conseguir utilizando la IA. <strong>No he programado nada: solo he escrito prompts.</strong></p>
+      <a class="back-link" href="index.html">Volver al generador</a>
+    </section>
+  </main>
+</body>
+</html>
